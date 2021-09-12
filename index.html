@@ -1,60 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+  <body>
+    <section class="container">
+      <h1>BMI Table</h1>
 
-<body>
+      <div class="double-col">
+        <b>BMI</b>
+        <b>Possible Results</b>
 
-  <section class="container">
-    <h1>Tabela de IMC</h1>
-    <div class="double-col">
-      <b>IMC</b>
-      <b>Resultado</b>
+        <p>Less than 18.5</p>
+        <p>Underweight</p>
 
-      <p>Menos do que 18,5</p>
-      <p>Abaixo do peso</p>
+        <p>Between 18.5 and 24.9</p>
+        <p>Healthy</p>
 
-      <p>Entre 18,5 e 24,9</p>
-      <p>Peso normal</p>
+        <p>Between 25 and 29.9</p>
+        <p>Overweight</p>
 
-      <p>Entre 25 e 29,9</p>
-      <p>Sobrepeso</p>
+        <p>Between 30 and 34.9</p>
+        <p>Obese - Class 1</p>
 
-      <p>Entre 30 e 34,9</p>
-      <p>Obesidade grau 1</p>
+        <p>Between 35 and 39.9</p>
+        <p>Obese - Class 2</p>
 
-      <p>Entre 35 e 39,9</p>
-      <p>Obesidade grau 2</p>
+        <p>40 or Greater</p>
+        <p>Obese - Class 3</p>
+      </div>
 
-      <p>Mais do que 40</p>
-      <p>Obesidade grau 3</p>
-    </div>
+      <div>
+        <h1>Calculate Your BMI (Body Mass Index)</h1>
 
-    <div>
-      <h1>Calcule o seu IMC</h1>
+        <form id="myForm">
+          <label for="weight">Weight (kg):</label>
+          <input type="text" name="weight" id="weight">
 
-      <form id="formulario">
-        <label for="peso">Peso:</label>
-        <input type="number" name="peso" id="peso" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;"/>
+          <label for="hight">Hight (cm):</label>
+          <input type="text" name="height" id="height">
 
-        <label for="altura">Altura (cm):</label>
-        <input type="number" name="altura" id="altura" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;">
+          <button type="submit">CALCULATE</button>
+        </form>
+      </div>
 
-        <button onclick="calcularIMC(event)">CALCULAR</button>
-      </form>
-    </div>
+      <div id="result">
+      </div>
+    </section>
 
-    <div id="resultado">
-    </div>
-  </section>
-
-  <script src="./assets/js/main.js"></script>
-</body>
-
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
