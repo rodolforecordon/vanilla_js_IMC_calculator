@@ -91,5 +91,8 @@ form button:hover {
 
 .bad {
   background: rgb(167, 65, 65)
+}
 
+#complete-date {
+  text-align: center;
 }
